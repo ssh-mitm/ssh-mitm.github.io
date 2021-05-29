@@ -4,84 +4,53 @@ title: SSH MITM Proxy Server
 permalink: /
 ---
 
-<section class="hero-section py-3 py-md-5">
+<div class="page-header theme-bg-dark py-5 text-center position-relative">
+    <div class="theme-bg-shapes-right"></div>
+    <div class="theme-bg-shapes-left"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-6 pt-3 mb-5 mb-lg-0">
-                <h1 class="site-headline font-weight-bold mb-3">
-                    SSH MITM SERVER &amp; content inspection
-                </h1>
-                <div class="site-tagline mb-4">
-                    man in the middle (mitm) server for security audits supporting public key authentication, session hijacking and file manipulation
-                </div>
-                <div class="cta-btns mb-lg-3">
-                    <a class="btn btn-primary mr-2 mb-3" href="https://github.com/ssh-mitm/ssh-mitm">Checkout on Github<i class="fab fa-github ml-2"></i></a>
-                    <a class="btn btn-secondary mb-3" href="https://docs.ssh-mitm.at">View Docs<i class="fas fa-book ml-2"></i></a>
-                </div>
-                <div id="status"></div>
-            </div>
-            <div class="col-12 col-lg-6 text-center" style="margin-top: 2rem;">
-                <img class="hero-figure mx-auto" src="https://www.ssh-mitm.at/assets/mitm-example.png" alt="">
-            </div>
-        </div><!--//row-->
+        <h1 class="page-heading single-col-max mx-auto">Projects</h1>
+        <div class="page-intro single-col-max mx-auto">Check out our projects on Github</div>
+
     </div>
-</section><!--//hero-section-->
+</div><!--//page-header-->
 
 
-<section class="benefits-section theme-bg-light py-5">
+<div class="page-content py-5">
+    <section class="options-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 mb-5">
+                    <div class="media shadow-sm p-4 rounded h-100">
+                        <!---
+                            /* Uncomment if you want to use a FontAwesome icon instead of an image */
+                            <div class="theme-icon-holder mr-4"><i class="far fa-life-ring"></i></div>
+                        -->
+                        <img class="mr-3" src="assets/images/streamline-free/customer-service-man.svg" alt="">
+                        <div class="media-body">
+                            <h5 class="mt-0"><a href="https://github.com/ssh-mitm/ssh-mitm/issues">Github Issues<i class="fas fa-long-arrow-alt-right ml-2"></i></a></h5>
+                            If you have questions or problems with SSH-MITM, please open a Issue Ticket on Github.
+                        </div><!--//media-body-->
+                    </div><!--//media-->
+                </div><!--//col-->
+                <div class="col-12 col-lg-6 mb-5">
+                    <div class="media shadow-sm p-4 rounded h-100">
 
-    <div class="container">
-        <h3 class="mb-2 text-center font-weight-bold section-title">Made for Security Audits</h3>
-        <div class="mb-5 text-center section-intro">Created to help you to secure your network</div>
-        <div class="row">
-            <div class="item col-12 col-md-6 col-lg-3">
-                <div class="item-inner rounded">
-                    <div class="icon-holder text-center mx-auto mb-3">
-                        <i class="fab fa-github"></i>
-                    </div><!--//icon-holder-->
-                    <h5 class="mb-3">Source is available</h5>
-                    <div>This project is open source and the source code is distributed on Github. This allows you to review the code and implement your own features.</div>
-                </div><!--//item-inner-->
-            </div><!--//item-->
+                        <!---
+                            /* Uncomment if you want to use a FontAwesome icon instead of an image */
+                            <div class="theme-icon-holder mr-4"><i class="fas fa-code"></i></div>
+                        -->
+                        <img class="mr-3" src="assets/images/streamline-free/write-paper-ink.svg" alt="">
+                        <div class="media-body">
+                            <h5 class="mt-0"><a href="https://docs.ssh-mitm.at">Documentation<i class="fas fa-long-arrow-alt-right ml-2"></i></a></h5>
+                            Have technical questions? Checkout our documentation.
+                        </div><!--//media-body-->
+                    </div><!--//media-->
+                </div><!--//col-->
+            </div><!--//row-->
+        </div><!--//container-->
+    </section><!--//options-section-->
 
-            <div class="item col-12 col-md-6 col-lg-3">
-                <div class="item-inner rounded">
-                    <div class="icon-holder text-center mx-auto mb-3">
-                        <i class="fab fa-linux"></i>
-                    </div><!--//icon-holder-->
-                    <h5 class="mb-3">Linux TProxy support</h5>
-                    <div>The Linux TProxy feature is supported to create a transparent intercepting ssh mitm server</div>
-                </div><!--//item-inner-->
-            </div><!--//item-->
-
-            <div class="item col-12 col-md-6 col-lg-3">
-                <div class="item-inner rounded">
-                    <div class="icon-holder text-center mx-auto mb-3">
-                        <i class="fas fa-key"></i>
-                    </div><!--//icon-holder-->
-                    <h5 class="mb-3">Public Key authentication</h5>
-                    <div>SSH MITM proxy server supports public key authentication and can use agent forwarding for remote authentication</div>
-                </div><!--//item-inner-->
-            </div><!--//item-->
-
-            <div class="item col-12 col-md-6 col-lg-3">
-                <div class="item-inner rounded">
-                    <div class="icon-holder text-center mx-auto mb-3">
-                        <i class="fas fa-terminal"></i>
-                    </div><!--//icon-holder-->
-                    <h5 class="mb-3">Session hijacking</h5>
-                    <div>ssh terminall sessions can be hijacked to inject commands or get full access to the terminal</div>
-                </div><!--//item-inner-->
-            </div><!--//item-->
-
-        </div><!--//row-->
-        <div class="pt-3 text-center">
-            <a class="btn btn-light" href="https://github.com/ssh-mitm/ssh-mitm">Checkout on Github<i class="fab fa-github ml-2"></i></a>
-        </div>
-    </div>
-
-</section><!--//benefits-section-->
-
+</div><!--//page-content-->
 
 
 <section class="how-section py-5">
