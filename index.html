@@ -1,0 +1,142 @@
+---
+layout: page
+title: SSH MITM Proxy Server
+permalink: /
+---
+
+<section class="hero-section py-3 py-md-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 pt-3 mb-5 mb-lg-0">
+                <h1 class="site-headline font-weight-bold mb-3">
+                    SSH MITM SERVER &amp; content inspection
+                </h1>
+                <div class="site-tagline mb-4">
+                    man in the middle (mitm) server for security audits supporting public key authentication, session hijacking and file manipulation
+                </div>
+                <div class="cta-btns mb-lg-3">
+                    <a class="btn btn-primary mr-2 mb-3" href="https://github.com/ssh-mitm/ssh-mitm">Checkout on Github<i class="fab fa-github ml-2"></i></a>
+                    <a class="btn btn-secondary mb-3" href="https://docs.ssh-mitm.at">View Docs<i class="fas fa-book ml-2"></i></a>
+                </div>
+                <div id="status"></div>
+            </div>
+            <div class="col-12 col-lg-6 text-center" style="margin-top: 2rem;">
+                <img class="hero-figure mx-auto" src="https://www.ssh-mitm.at/assets/mitm-example.png" alt="">
+            </div>
+        </div><!--//row-->
+    </div>
+</section><!--//hero-section-->
+
+
+<section class="benefits-section theme-bg-light py-5">
+
+    <div class="container">
+        <h3 class="mb-2 text-center font-weight-bold section-title">Made for Security Audits</h3>
+        <div class="mb-5 text-center section-intro">Created to help you to secure your network</div>
+        <div class="row">
+            <div class="item col-12 col-md-6 col-lg-3">
+                <div class="item-inner rounded">
+                    <div class="icon-holder text-center mx-auto mb-3">
+                        <i class="fab fa-github"></i>
+                    </div><!--//icon-holder-->
+                    <h5 class="mb-3">Source is available</h5>
+                    <div>This project is open source and the source code is distributed on Github. This allows you to review the code and implement your own features.</div>
+                </div><!--//item-inner-->
+            </div><!--//item-->
+
+            <div class="item col-12 col-md-6 col-lg-3">
+                <div class="item-inner rounded">
+                    <div class="icon-holder text-center mx-auto mb-3">
+                        <i class="fab fa-linux"></i>
+                    </div><!--//icon-holder-->
+                    <h5 class="mb-3">Linux TProxy support</h5>
+                    <div>The Linux TProxy feature is supported to create a transparent intercepting ssh mitm server</div>
+                </div><!--//item-inner-->
+            </div><!--//item-->
+
+            <div class="item col-12 col-md-6 col-lg-3">
+                <div class="item-inner rounded">
+                    <div class="icon-holder text-center mx-auto mb-3">
+                        <i class="fas fa-key"></i>
+                    </div><!--//icon-holder-->
+                    <h5 class="mb-3">Public Key authentication</h5>
+                    <div>SSH MITM proxy server supports public key authentication and can use agent forwarding for remote authentication</div>
+                </div><!--//item-inner-->
+            </div><!--//item-->
+
+            <div class="item col-12 col-md-6 col-lg-3">
+                <div class="item-inner rounded">
+                    <div class="icon-holder text-center mx-auto mb-3">
+                        <i class="fas fa-terminal"></i>
+                    </div><!--//icon-holder-->
+                    <h5 class="mb-3">Session hijacking</h5>
+                    <div>ssh terminall sessions can be hijacked to inject commands or get full access to the terminal</div>
+                </div><!--//item-inner-->
+            </div><!--//item-->
+
+        </div><!--//row-->
+        <div class="pt-3 text-center">
+            <a class="btn btn-light" href="https://github.com/ssh-mitm/ssh-mitm">Checkout on Github<i class="fab fa-github ml-2"></i></a>
+        </div>
+    </div>
+
+</section><!--//benefits-section-->
+
+
+
+<section class="how-section py-5">
+    <div class="container">
+        <h3 class="mb-2 text-center font-weight-bold section-title">How Does It Work</h3>
+        <div class="mb-5 text-center section-intro">You're only a few simple steps away</div>
+
+        <div class="row">
+            <div class="item col-12 col-md-4">
+                <div class="icon-holder">
+                    <img src="assets/images/streamline-free/monitor-loading-progress.svg" alt="">
+                    <div class="arrow-holder d-none d-lg-inline-block"></div>
+                </div><!--//icon-holder-->
+                <div class="desc p-3">
+                    <h5><span class="step-count mr-2">1</span>Install SSH-MITM</h5>
+                    <p>
+                        To install SSH-MITM, simply run this simple command in your terminal of choice:<br/>
+                        <code>$ pip install ssh-mitm</code>
+                    </p>
+                </div><!--//desc-->
+            </div><!--//item-->
+            <div class="item col-12 col-md-4">
+                <div class="icon-holder">
+                    <img src="assets/images/streamline-free/programmer-male.svg" alt="">
+                    <div class="arrow-holder d-none d-lg-inline-block"></div>
+                </div><!--//icon-holder-->
+                <div class="desc p-3">
+                    <h5><span class="step-count mr-2">2</span>Connect to the network</h5>
+                    <p>
+                        To start an intercepting mitm-ssh server on Port 10022,
+                        all you have to do is run a single command.<br/>
+                        <code>$ ssh-mitm --remote-host 192.168.0.x</code>
+                    </p>
+                    <p>
+                        Now let's try to connect to the ssh-mitm server.<br/>
+                        <code>$ ssh -p 10022 user@proxyserver</code>
+                    </p>
+                </div><!--//desc-->
+            </div><!--//item-->
+            <div class="item col-12 col-md-4">
+                <div class="icon-holder">
+                    <img src="assets/images/streamline-free/customer-service-woman.svg" alt="">
+                </div><!--//icon-holder-->
+                <div class="desc p-3">
+                    <h5><span class="step-count mr-2">3</span>Hijack SSH sessions</h5>
+                    <p>
+                        When a client connects, the ssh-mitm starts a new server, which is used for session hijacking.<br/>
+                        <code>[INFO]  created injector shell on port 34463</code>
+                    </p><p>
+                        To hijack this session, you can use your favorite ssh client.
+                        All you have to do is to connect to the hijacked session.<br/>
+                        <code>$ ssh -p 34463 127.0.0.1</code>
+                    </p>
+                </div><!--//desc-->
+            </div><!--//item-->
+        </div><!--//row-->
+    </div><!--//container-->
+</section><!--//how-section-->
