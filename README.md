@@ -1,2 +1,2 @@
 # ssh-mitm.github.io
-SSH-MITM Github Project Page
+SSH-MITM GitHub Project Page
