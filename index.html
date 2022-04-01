@@ -14,45 +14,6 @@ permalink: /
     </div>
 </div><!--//page-header-->
 
-
-<div class="page-content py-5">
-    <section class="options-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-6 mb-5">
-                    <div class="media shadow-sm p-4 rounded h-100">
-                        <!---
-                            /* Uncomment if you want to use a FontAwesome icon instead of an image */
-                            <div class="theme-icon-holder mr-4"><i class="far fa-life-ring"></i></div>
-                        -->
-                        <img class="mr-3" src="https://www.ssh-mitm.at/assets/images/streamline-free/programmer-male.svg" alt="">
-                        <div class="media-body">
-                            <h5 class="mt-0"><a href="https://github.com/ssh-mitm/ssh-mitm">SSH-MITM Server<i class="fas fa-long-arrow-alt-right ml-2"></i></a></h5>
-                            man in the middle (mitm) server for security audits supporting public key authentication, session hijacking and file manipulation
-                        </div><!--//media-body-->
-                    </div><!--//media-->
-                </div><!--//col-->
-                <div class="col-12 col-lg-6 mb-5">
-                    <div class="media shadow-sm p-4 rounded h-100">
-
-                        <!---
-                            /* Uncomment if you want to use a FontAwesome icon instead of an image */
-                            <div class="theme-icon-holder mr-4"><i class="fas fa-code"></i></div>
-                        -->
-                        <img class="mr-3" src="https://www.ssh-mitm.at/assets/images/streamline-free/monitor-window.svg" alt="">
-                        <div class="media-body">
-                            <h5 class="mt-0"><a href="https://github.com/ssh-mitm/ssh-mitm-plugins">SSH-MITM Plugins<i class="fas fa-long-arrow-alt-right ml-2"></i></a></h5>
-                            Do you want to extend SSH-MITM Server? Checkout our community contributed plugins.
-                        </div><!--//media-body-->
-                    </div><!--//media-->
-                </div><!--//col-->
-            </div><!--//row-->
-        </div><!--//container-->
-    </section><!--//options-section-->
-
-</div><!--//page-content-->
-
-
 <section class="how-section py-5">
     <div class="container">
         <h3 class="mb-2 text-center font-weight-bold section-title">Do you want to intercept SSH sessions?</h3>
@@ -82,7 +43,7 @@ permalink: /
                     <p>
                         To start an intercepting mitm-ssh server on Port 10022,
                         all you have to do is run a single command.<br/>
-                        <code>$ ssh-mitm --remote-host 192.168.0.x</code>
+                        <code>$ ssh-mitm server --remote-host 192.168.0.x</code>
                     </p>
                     <p>
                         Now let's try to connect to the ssh-mitm server.<br/>
