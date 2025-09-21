@@ -1,72 +1,202 @@
----
-layout: page
-title: SSH MITM Projects
-permalink: /
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SSH-MITM - ssh audits made simple</title>
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --bg-light: #f8fafc;
+      --accent: #2563eb;
+      --accent-hover: #1e40af;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --radius: 14px;
+      --shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: var(--accent); }
+    h1, h2, h3 { font-weight: 700; line-height: 1.2; margin: 1.5rem 0 1rem; }
+    p { margin-bottom: 1rem; }
 
-<div class="page-header theme-bg-dark py-5 text-center position-relative">
-    <div class="theme-bg-shapes-right"></div>
-    <div class="theme-bg-shapes-left"></div>
-    <div class="container">
-        <h1 class="page-heading single-col-max mx-auto">SSH-MITM Projects</h1>
-        <div class="page-intro single-col-max mx-auto">Check out our projects on GitHub</div>
+    /* Header */
+    header {
+      background: var(--bg-dark);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow);
+    }
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo { font-weight: 700; font-size: 1.4rem; letter-spacing: 1px; }
+    nav { display: flex; gap: 1.5rem; align-items: center; }
+    nav a { color: #cbd5e1; font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: #fff; }
+    .btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--accent-hover); }
 
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 2rem;
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .hero-text {
+      text-align: left;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    .hero p {
+      color: var(--text-light);
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      justify-self: center;
+    }
+
+    /* Content */
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem 4rem;
+    }
+    section { margin-bottom: 3rem; }
+    ul { margin: 0 0 1rem 1.5rem; }
+    code {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 0.2rem 0.4rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 1rem;
+      border-radius: var(--radius);
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--bg-dark);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin: 2rem 0;
+    }
+    .cta a { color: #fff; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo">SSH-MITM</div>
+      <nav>
+        <a href="https://docs.ssh-mitm.at">Dokumentation</a>
+        <a href="https://github.com/ssh-mitm/ssh-mitm" class="btn btn-primary">GitHub</a>
+      </nav>
     </div>
-</div><!--//page-header-->
+  </header>
 
-<section class="how-section py-5">
-    <div class="container">
-        <h3 class="mb-2 text-center font-weight-bold section-title">Do you want to intercept SSH sessions?</h3>
-        <div class="mb-5 text-center section-intro">You're only a few simple steps away</div>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>SSH-MITM – ssh audits made simple</h1>
+      <p>
+        A man-in-the-middle SSH server for security audits with
+        <b>publickey authentication</b>, <b>session hijacking</b> and
+        <b>file manipulation</b>.
+      </p>
+      <a href="https://docs.ssh-mitm.at" class="btn btn-primary">Get Started</a>
+    </div>
+    <img src="https://docs.ssh-mitm.at/_images/intro.png" alt="SSH-MITM intercepting password login">
+  </section>
 
-        <div class="row">
-            <div class="item col-12 col-md-4">
-                <div class="icon-holder">
-                    <img src="https://www.ssh-mitm.at/assets/images/streamline-free/monitor-loading-progress.svg" alt="">
-                    <div class="arrow-holder d-none d-lg-inline-block"></div>
-                </div><!--//icon-holder-->
-                <div class="desc p-3">
-                    <h5><span class="step-count mr-2">1</span>Install SSH-MITM</h5>
-                    <p>
-                        To install SSH-MITM, simply run this simple command in your terminal of choice:<br/>
-                        <code>$ pip install ssh-mitm</code>
-                    </p>
-                </div><!--//desc-->
-            </div><!--//item-->
-            <div class="item col-12 col-md-4">
-                <div class="icon-holder">
-                    <img src="https://www.ssh-mitm.at/assets/images/streamline-free/programmer-male.svg" alt="">
-                    <div class="arrow-holder d-none d-lg-inline-block"></div>
-                </div><!--//icon-holder-->
-                <div class="desc p-3">
-                    <h5><span class="step-count mr-2">2</span>Connect to the network</h5>
-                    <p>
-                        To start an intercepting mitm-ssh server on Port 10022,
-                        all you have to do is run a single command.<br/>
-                        <code>$ ssh-mitm server --remote-host 192.168.0.x</code>
-                    </p>
-                    <p>
-                        Now let's try to connect to the ssh-mitm server.<br/>
-                        <code>$ ssh -p 10022 user@proxyserver</code>
-                    </p>
-                </div><!--//desc-->
-            </div><!--//item-->
-            <div class="item col-12 col-md-4">
-                <div class="icon-holder">
-                    <img src="https://www.ssh-mitm.at/assets/images/streamline-free/customer-service-woman.svg" alt="">
-                </div><!--//icon-holder-->
-                <div class="desc p-3">
-                    <h5><span class="step-count mr-2">3</span>Hijack SSH sessions</h5>
-                    <p>
-                        When a client connects, the ssh-mitm starts a new server, which is used for session hijacking.<br/>
-                        <code>[INFO]  created injector shell on port 34463</code>
-                    </p><p>
-                        To hijack this session, you can use your favorite ssh client.
-                        All you have to do is to connect to the hijacked session.<br/>
-                        <code>$ ssh -p 34463 127.0.0.1</code>
-                    </p>
-                </div><!--//desc-->
-            </div><!--//item-->
-        </div><!--//row-->
-    </div><!--//container-->
-</section><!--//how-section-->
+  <main>
+    <section id="features">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Publickey authentication & FIDO token phishing</li>
+        <li>Hijacking and logging of SSH sessions</li>
+        <li>SCP/SFTP file manipulation</li>
+        <li>Dynamic port forwarding with SOCKS 4/5</li>
+        <li>MOSH interception</li>
+        <li>Client vulnerability audits</li>
+        <li>Plugin support</li>
+      </ul>
+    </section>
+
+    <section id="quickstart">
+      <h2>Quickstart</h2>
+      <p>Install SSH-MITM with pip:</p>
+      <pre>python3 -m pip install ssh-mitm</pre>
+      <p>Start the MITM server and connect via SSH:</p>
+      <pre>ssh-mitm server --remote-host 192.168.0.x
+ssh -p 10022 user@proxyserver</pre>
+      <p>
+        That’s it – credentials and session logs are captured.<br>
+        For detailed installation methods and advanced usage,
+        see the <a href="https://docs.ssh-mitm.at">documentation</a>.
+      </p>
+    </section>
+
+    <section id="contributing">
+      <h2>Contributing</h2>
+      <p>
+        Contributions are always welcome! Fork the repo, open an issue, or create
+        a pull request on <a href="https://github.com/ssh-mitm/ssh-mitm">GitHub</a>.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>E-Mail: <a href="mailto:support@ssh-mitm.at">support@ssh-mitm.at</a></p>
+      <p><a href="https://github.com/ssh-mitm/ssh-mitm/issues">Issue Tracker on GitHub</a></p>
+    </section>
+
+    <div class="cta">
+      <h3>SSH MITM Proxy Server is Open Source</h3>
+      <p>Developed by the community. Join us and contribute!</p>
+      <a href="https://github.com/ssh-mitm/ssh-mitm">Contribute on GitHub</a>
+    </div>
+  </main>
+</body>
+</html>
