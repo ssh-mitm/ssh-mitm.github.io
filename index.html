@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SSH-MITM - ssh audits made simple</title>
+  <title>SSH-MITM – GitHub Project Page</title>
   <style>
     :root {
       --bg-dark: #0f172a;
@@ -30,63 +30,58 @@
     header {
       background: var(--bg-dark);
       color: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      padding: 1rem 2rem;
+      text-align: center;
       box-shadow: var(--shadow);
     }
-    .navbar {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
+    header h1 {
+      font-size: 1.8rem;
     }
-    .logo { font-weight: 700; font-size: 1.4rem; letter-spacing: 1px; }
-    nav { display: flex; gap: 1.5rem; align-items: center; }
-    nav a { color: #cbd5e1; font-weight: 500; transition: color 0.2s; }
-    nav a:hover { color: #fff; }
+    header p {
+      color: #cbd5e1;
+      margin-top: 0.4rem;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 520px;
+      margin: 2rem auto;
+      display: block;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     .btn {
-      padding: 0.6rem 1.2rem;
+      padding: 0.7rem 1.4rem;
       border-radius: var(--radius);
       font-weight: 600;
       transition: background 0.2s;
+      display: inline-block;
     }
     .btn-primary {
       background: var(--accent);
       color: #fff;
     }
     .btn-primary:hover { background: var(--accent-hover); }
-
-    /* Hero */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 2rem;
-      padding: 3rem 1rem;
-      max-width: 1200px;
-      margin: auto;
+    .btn-light {
+      background: #fff;
+      color: var(--text-dark);
+      border: 1px solid #cbd5e1;
     }
-    .hero-text {
-      text-align: left;
-    }
-    .hero h1 {
-      font-size: 2.2rem;
-    }
-    .hero p {
-      color: var(--text-light);
-      margin: 1rem 0;
-      font-size: 1.1rem;
-    }
-    .hero img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      justify-self: center;
-    }
+    .btn-light:hover { background: #f1f5f9; }
 
     /* Content */
     main {
@@ -112,45 +107,74 @@
       margin-bottom: 1rem;
     }
 
-    /* CTA */
-    .cta {
+    /* Footer */
+    .footer {
       background: var(--bg-dark);
-      color: #fff;
+      color: #e2e8f0;
       text-align: center;
-      padding: 2rem 1rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      margin: 2rem 0;
+      padding: 2.5rem 1rem;
+      margin-top: 3rem;
     }
-    .cta a { color: #fff; font-weight: bold; }
+    .footer h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      color: #fff;
+    }
+    .footer p { margin: 0.5rem 0 1rem; }
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .footer-links a {
+      color: #cbd5e1;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+    .footer-links a:hover { color: #fff; }
+    .copyright {
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="navbar">
-      <div class="logo">SSH-MITM</div>
-      <nav>
-        <a href="https://docs.ssh-mitm.at">Dokumentation</a>
-        <a href="https://github.com/ssh-mitm/ssh-mitm" class="btn btn-primary">GitHub</a>
-      </nav>
-    </div>
+    <h1>SSH-MITM</h1>
   </header>
 
   <section class="hero">
-    <div class="hero-text">
-      <h1>SSH-MITM – ssh audits made simple</h1>
-      <p>
-        A man-in-the-middle SSH server for security audits with
-        <b>publickey authentication</b>, <b>session hijacking</b> and
-        <b>file manipulation</b>.
-      </p>
-      <a href="https://docs.ssh-mitm.at" class="btn btn-primary">Get Started</a>
-    </div>
+    <h2>SSH audits made simple</h2>
+    <p>
+      SSH-MITM is a man-in-the-middle SSH server for security audits with
+      <b>publickey authentication</b>, <b>session hijacking</b> and
+      <b>file manipulation</b>.
+    </p>
     <img src="https://docs.ssh-mitm.at/_images/intro.png" alt="SSH-MITM intercepting password login">
+    <div class="hero-buttons">
+      <a href="https://docs.ssh-mitm.at" class="btn btn-primary">📘 Documentation</a>
+      <a href="https://github.com/ssh-mitm/ssh-mitm" class="btn btn-light">🌐 GitHub Repository</a>
+    </div>
   </section>
 
   <main>
+    <section id="quickstart">
+      <h2>Quickstart</h2>
+      <p>Install SSH-MITM with pip and start the server:</p>
+      <pre>python3 -m pip install ssh-mitm
+ssh-mitm server --remote-host 192.168.0.x</pre>
+      <p>Connect to the MITM server:</p>
+      <pre>ssh -p 10022 user@proxyserver</pre>
+      <p>
+        That’s it! Credentials and sessions are logged.<br>
+        For installation options (AppImage, Snap, Flatpak, etc.) and advanced usage, see the 
+        <a href="https://docs.ssh-mitm.at">documentation</a>.
+      </p>
+    </section>
+
     <section id="features">
       <h2>Key Features</h2>
       <ul>
@@ -163,40 +187,26 @@
         <li>Plugin support</li>
       </ul>
     </section>
-
-    <section id="quickstart">
-      <h2>Quickstart</h2>
-      <p>Install SSH-MITM with pip:</p>
-      <pre>python3 -m pip install ssh-mitm</pre>
-      <p>Start the MITM server and connect via SSH:</p>
-      <pre>ssh-mitm server --remote-host 192.168.0.x
-ssh -p 10022 user@proxyserver</pre>
-      <p>
-        That’s it – credentials and session logs are captured.<br>
-        For detailed installation methods and advanced usage,
-        see the <a href="https://docs.ssh-mitm.at">documentation</a>.
-      </p>
-    </section>
-
-    <section id="contributing">
-      <h2>Contributing</h2>
-      <p>
-        Contributions are always welcome! Fork the repo, open an issue, or create
-        a pull request on <a href="https://github.com/ssh-mitm/ssh-mitm">GitHub</a>.
-      </p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>E-Mail: <a href="mailto:support@ssh-mitm.at">support@ssh-mitm.at</a></p>
-      <p><a href="https://github.com/ssh-mitm/ssh-mitm/issues">Issue Tracker on GitHub</a></p>
-    </section>
-
-    <div class="cta">
-      <h3>SSH MITM Proxy Server is Open Source</h3>
-      <p>Developed by the community. Join us and contribute!</p>
-      <a href="https://github.com/ssh-mitm/ssh-mitm">Contribute on GitHub</a>
-    </div>
   </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>SSH-MITM – Open Source Security Auditing</h3>
+      <p>
+        SSH-MITM is developed and maintained by the community.<br>
+        Source code, issues and contributions are managed on GitHub.
+      </p>
+      <div class="footer-links">
+        <a href="https://docs.ssh-mitm.at">📘 Documentation</a>
+        <a href="https://github.com/ssh-mitm/ssh-mitm">🌐 GitHub</a>
+        <a href="https://github.com/ssh-mitm/ssh-mitm/issues">🐞 Issue Tracker</a>
+        <a href="mailto:support@ssh-mitm.at">✉️ Contact</a>
+      </div>
+      <p class="copyright">
+        © 2025 <a href="https://github.com/ssh-mitm/ssh-mitm">SSH-MITM Dev-Team</a>. Licensed under the GPL.
+      </p>
+    </div>
+  </footer>
+
 </body>
 </html>
